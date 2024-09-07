@@ -1,0 +1,45 @@
+{
+    "name": "drip-initial",
+    "version": "1.0.0",
+    "description": "Fastify server with IORedis using Docker and TypeScript",
+    "main": "dist/server.js",
+    "scripts": {
+        "dev:client": "vite",
+        "build:client": "tsc -b && vite build",
+        "build:server": "tsc",
+        "dev:server": "ts-node-dev --respawn --transpile-only server/index.ts",
+        "local:server": "docker compose up --build",
+        "start:server": "node dist/server/index.js"
+    },
+    "keywords": [],
+    "author": "Aquib Vadsaria",
+    "license": "ISC",
+    "dependencies": {
+        "@fastify/cors": "^9.0.1",
+        "@tanstack/react-query": "^5.55.0",
+        "fastify": "^4.0.0",
+        "ioredis": "^5.0.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "uuid": "^10.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.1",
+        "@types/ioredis": "^4.0.0",
+        "@types/node": "^18.0.0",
+        "@types/react": "^18.3.5",
+        "@types/react-dom": "^18.3.0",
+        "@types/uuid": "^10.0.0",
+        "@vitejs/plugin-react": "^4.3.1",
+        "eslint": "^9.9.1",
+        "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+        "eslint-plugin-react-refresh": "^0.4.11",
+        "globals": "^15.9.0",
+        "ts-node": "^10.9.2",
+        "ts-node-dev": "^2.0.0",
+        "tsc-watch": "^5.0.3",
+        "typescript": "^5.5.3",
+        "typescript-eslint": "^8.3.0",
+        "vite": "^5.4.2"
+    }
+}
