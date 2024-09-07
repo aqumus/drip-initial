@@ -12,6 +12,20 @@ This is rough implementation of the given below use case
 -   UserId detection in server
 -   Rolling Layout mechanism
 
+#### Solution:
+
+-   generate a user ID on client and save the ID in localstorage
+-   Pass the userId to server for getting layout
+-   Server then,
+    -   pulls in the userId from request
+    -   pull the previous layout for a given userId from storage provider
+    -   Send the next Layout Id
+-   Based on next layoutId received by client it renders corresponding (Lazy Loaded) UI Layout
+
+**TODO:**
+
+-   Instead of sending layoutId, server could send the layout template to client (Server side rendered layout).
+
 ### Prequisite:
 
 -   Docker and running docker daemon
